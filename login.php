@@ -1,17 +1,15 @@
 <?php
 // Thiết lập thông tin kết nối đến database
 
-$servername = "database-server-lab7.cocgl5wbv5ga.ap-southeast-
-1.rds.amazonaws.com";
+$servername = "db-server-lab7.cubeob65dm6q.ap-southeast-1.rds.amazonaws.com";
 
 $username = "admin";
-$password = "12345678";
-$dbname = "myDB";
+$password = "nhi12345";
+$dbname = "MyDB";
 // Tạo kết nối đến database
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Kiểm tra kết nối
 
-76
 
 if ($conn->connect_error) {
 die("Kết nối không thành công: " . $conn->connect_error);
@@ -29,8 +27,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // Nếu có, đăng nhập thành công
 echo "Bạn đã đăng nhập thành công";
-// Thực hiện các hành động cần thiết, ví dụ như đưa người dùng
-vào trang chào mừng
+// Thực hiện các hành động cần thiết, ví dụ như đưa người dùng vào trang chào mừng
 } else {
 // Nếu không, đăng nhập không thành công
 echo "Bạn đã đăng nhập không thành công"; }
